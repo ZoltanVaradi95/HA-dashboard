@@ -1,4 +1,14 @@
-<p>dashboard works!</p>
+<!-- @for (entity of entities$ | async; track $index) {
+<mat-card appearance="outlined">
+    <mat-card-content>
+        <span>{{entity.entity_id}}</span>
+        <mat-slide-toggle [checked]="entity.state === lightStateType.ON" (change)="switchEntity($event, entity)">{{entity.state}}</mat-slide-toggle>
+    </mat-card-content>
+</mat-card>
+} -->
+<!-- UJPALOTA FELE -->
+<app-bkk [stopKey]="stopKey_1"></app-bkk>
+<!-- KELENFOLD FELE -->
+<app-bkk [stopKey]="stopKey_2"></app-bkk>
 
-
-<p>asdasd</p>
+<app-weather></app-weather>

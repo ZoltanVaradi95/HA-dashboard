@@ -1,0 +1,10 @@
+<mat-card *ngIf="weatherInfo$ | async as weatherInfo" appearance="outlined">
+    @for (weather of weatherDaysSignal(); track $index) {
+    <mat-card-header>
+        <mat-card-title>{{weather.description}}</mat-card-title>
+    </mat-card-header>
+    <mat-card-content>
+        <!-- ALERTS WILL COME HERE -->
+    </mat-card-content>
+    }
+</mat-card>

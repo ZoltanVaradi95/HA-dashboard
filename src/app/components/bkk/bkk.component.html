@@ -1,0 +1,12 @@
+<mat-card appearance="outlined">
+    @for (bkkstop of bkkStopInfo$ | async; track $index) {
+    <mat-card-header>
+        <mat-card-title>{{bkkstop.stopHeadsign}}</mat-card-title>
+        <mat-card-subtitle>{{calculateBusArrivalMinutes(bkkstop.predictedArrivalTime? bkkstop.predictedArrivalTime :
+            bkkstop.arrivalTime)}}</mat-card-subtitle>
+    </mat-card-header>
+    <mat-card-content>
+        <!-- ALERTS WILL COME HERE -->
+    </mat-card-content>
+    }
+</mat-card>
